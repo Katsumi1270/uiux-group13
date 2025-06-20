@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanjung Aru Nelayan Beach Labuan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body class="overflow-x-hidden">
+  <!-- Hero Section -->
+  <header class="hero">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+      <source src="img/hero.mp4" type="video/mp4">
+    </video>
+    
+    <div class="hero-content px-4">
+      <h1 data-en="Tanjung Aru Nelayan Beach" data-my="Pantai Nelayan Tanjung Aru">Tanjung Aru Nelayan Beach</h1>
+      <p data-en="Discover the untouched beauty of Labuan's hidden gem. Crystal clear waters, golden sands, and unforgettable memories await." data-my="Temui keindahan permata tersembunyi Labuan yang belum disentuh. Air yang jernih, pasir keemasan, dan kenangan yang tidak dapat dilupakan menanti.">Discover the untouched beauty of Labuan's hidden gem. Crystal clear waters, golden sands, and unforgettable memories await.</p>
+      <a href="#about" id="exploreBtn" class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-3 rounded-lg shadow transition duration-300" data-en="Explore More" data-my="Terokai Lagi">Explore More</a>
+    </div>
+  </header>
+
+<!-- Navigation -->
+<nav class="navbar fixed top-0 left-0 w-full z-50 backdrop-blur bg-white/80 shadow transition-all duration-300">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="flex items-center justify-between py-4">
+      <!-- Logo -->
+      <a href="#" class="text-2xl font-bold text-blue-600">Tanjung Aru Nelayan</a>
+
+      <!-- Menu Toggle (Mobile) -->
+      <button id="menuToggle" class="block md:hidden text-gray-700 focus:outline-none ml-auto">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6 items-center font-medium text-gray-700">
+        <a href="#about" class="nav-link hover:text-blue-600 transition" data-en="About" data-my="Tentang">About</a>
+        <a href="#gallery" class="nav-link hover:text-blue-600 transition" data-en="Gallery" data-my="Galeri">Gallery</a>
+        <a href="#things-to-do" class="nav-link hover:text-blue-600 transition" data-en="Things to Do" data-my="Aktiviti">Things to Do</a>
+        <a href="#stalls" class="nav-link hover:text-blue-600 transition" data-en="Stalls" data-my="Gerai">Stalls</a>
+        <a href="#facilities" class="nav-link hover:text-blue-600 transition" data-en="Facilities" data-my="Fasiliti">Facilities</a>
+        <a href="#testimonials" class="nav-link hover:text-blue-600 transition" data-en="Testimonials" data-my="Testimoni">Testimonials</a>
+        <a href="#map" class="nav-link hover:text-blue-600 transition" data-en="Location" data-my="Lokasi">Location</a>
+        <a href="#contact" class="nav-link hover:text-blue-600 transition" data-en="Contact" data-my="Hubungi">Contact</a>
+
+        <!-- Translate Button -->
+        <button id="translateBtn" class="flex items-center gap-1 px-3 py-1 border rounded text-sm bg-white hover:bg-blue-50 text-blue-600 border-blue-600 transition">
+          <span id="languageText">BM</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
+            <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden mt-2 space-y-4 py-4 border-t border-gray-200">
+      <a href="#about" class="block nav-link text-gray-700 hover:text-blue-600" data-en="About" data-my="Tentang">About</a>
+      <a href="#gallery" class="block nav-link text-gray-700 hover:text-blue-600" data-en="Gallery" data-my="Galeri">Gallery</a>
+      <a href="#things-to-do" class="block nav-link text-gray-700 hover:text-blue-600" data-en="Things to do" data-my="Aktiviti">Things to Do</a>
+      <a href="#stalls" class="block nav-link text-gray-700 hover:text-blue-600" data-en="Stalls" data-my="Gerai">Stalls</a>
+      <a href="#facilities" class="block nav-link text-gray-700 hover:text-blue-600" data-en="Facilities" data-my="Fasiliti">Facilities</a>
+      <a href="#testimonials" class="block nav-link text-gray-700 hover:text-blue-600" data-en="Testimonials" data-my="Testimoni">Testimonials</a>
+      <a href="#map" class="block nav-link text-gray-700 hover:text-blue-600" data-en="Location" data-my="Lokasi">Location</a>
+      <a href="#contact" class="block nav-link text-gray-700 hover:text-blue-600" data-en="Contact" data-my="Hubungi">Contact</a>
+
+      <!-- Mobile Translate Button -->
+      <div class="pt-4 border-t">
+        <button id="translateBtnMobile" class="w-full flex justify-center items-center gap-2 px-4 py-2 border rounded text-sm bg-white hover:bg-blue-50 text-blue-600 border-blue-600 transition">
+          <span id="languageTextMobile">BM</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
+            <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- About Section -->
+  <section id="about" class="section relative text-white" data-aos="fade-up">
+  <!-- Gradient overlay -->
+  <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/40 via-black/40 to-black/40"></div>
+
+  <!-- Background image -->
+  <div class="absolute inset-0 z-[-1] bg-cover bg-center bg-fixed" style="background-image: url('img/bg1.jpg');"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 container mx-auto px-4 p-6"  data-aos="fade-right" data-aos-delay="200">
+
+      <h2 class="section-title center text-3xl font-bold text-white-800 mb-4" data-en="About Tanjung Aru Nelayan" data-my="Mengenai Pantai">
+  About Tanjung Aru Nelayan
+</h2>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2">
+              <img src="img/about.png" alt="About Tanjung Aru Nelayan Beach" class="w-full h-full object-cover">
+            </div>
+            <div class="md:w-1/2 p-8">
+              <p class="text-gray-700 mb-4" data-en="Tanjung Aru Nelayan Beach, located about 8 to 10 kilometers from Labuan town, is a peaceful coastal spot known for its white sandy shores, traditional fishing boats, and scenic mangrove areas." data-my="Pantai Tanjung Aru Nelayan, terletak kira-kira 8 hingga 10 kilometer dari pekan Labuan, merupakan kawasan pantai yang damai yang terkenal dengan pantai berpasir putih, bot nelayan tradisional dan kawasan hutan bakau yang indah.">Tanjung Aru Nelayan Beach, located about 8 to 10 kilometers from Labuan town, is a peaceful coastal spot known for its white sandy shores, traditional fishing boats, and scenic mangrove areas.</p>
+              <p class="text-gray-700 mb-4" data-en="It's especially popular at sunrise, offering stunning views that sometimes include Mount Kinabalu in the distance. The beach is part of a small fishing village where locals land their catch daily." data-my="Ia amat popular pada waktu matahari terbit, menawarkan pemandangan menakjubkan yang kadangkala merangkumi Gunung Kinabalu di kejauhan. Pantai ini adalah sebahagian daripada perkampungan nelayan kecil di mana penduduk tempatan mendaratkan tangkapan mereka setiap hari.">It's especially popular at sunrise, offering stunning views that sometimes include Mount Kinabalu in the distance. The beach is part of a small fishing village where locals land their catch daily.</p>
+              <p class="text-gray-700" data-en="On weekends, visitors can enjoy food stalls serving local dishes like ambuyat and fresh seafood. Though charming, the beach faces serious coastal erosion, with some parts narrowing from 30 meters to just 2 or 3 meters." data-my="Pada hujung minggu, pengunjung boleh menikmati gerai makanan yang menyajikan hidangan tempatan seperti ambuyat dan makanan laut segar. Walaupun menawan, pantai ini menghadapi hakisan pantai yang serius, dengan beberapa bahagian mengecil daripada 30 meter kepada hanya 2 atau 3 meter.">On weekends, visitors can enjoy food stalls serving local dishes like ambuyat and fresh seafood. Though charming, the beach faces serious coastal erosion, with some parts narrowing from 30 meters to just 2 or 3 meters.</p>
+              
+              <div class="mt-6 grid grid-cols-2 gap-4">
+                <div class="bg-primary/10 p-4 rounded-lg">
+                  <div class="text-yellow-300 font-bold text-xl">8km</div>
+                  <div class="text-sm text-gray-600" data-en="From Labuan Town" data-my="Dari Bandar Labuan">From Labuan Town</div>
+                </div>
+                <div class="bg-primary/10 p-4 rounded-lg">
+                  <div class="text-yellow-300 font-bold text-xl" data-en="best" data-my="Terbaik">Best</div>
+                  <div class="text-sm text-gray-600" data-en="Sunrise Views" data-my="Pemandangan Matahari Terbit">Sunrise Views</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="section bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title center text-3xl font-bold text-gray-800 mb-4" data-en="Photo Gallery" data-my="Galeri Foto">
+  Photo Gallery
+</h2>
+
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-en="Explore the breathtaking beauty of Tanjung Aru Nelayan Beach through our photo collection" data-my="Terokai keindahan Pantai Tanjung Aru Nelayan yang menakjubkan melalui koleksi foto kami">Explore the breathtaking beauty of Tanjung Aru Nelayan Beach through our photo collection</p>
+      
+      <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="img/gallery1.png" alt="Gallery Image 1">
+          <div class="caption">
+            <h3 data-en="Landmark" data-my="Mercu Tanda">Landmark</h3>
+            <p class="text-sm" data-en="" data-my="Sesuai untuk muatnaik media sosial">Perfect for social media posting</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="img/gallery2.png" alt="Gallery Image 2">
+          <div class="caption">
+            <h3 data-en="Stalls" data-my="Gerai">Stall</h3>
+            <p class="text-sm" data-en="where the signature Ambuyat is prepared" data-my="Di mana tandatangan Ambuyat disediakan">where the signature Ambuyat is prepared</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="img/gallery3.png" alt="Gallery Image 3">
+          <div class="caption">
+            <h3 data-en="Shade" data-my="Peneduh">Shade</h3>
+            <p class="text-sm" data-en="Helps cover from the hot sunlight" data-my="Membantu melindungi daripada cahaya matahari yang panas">Helps cover from the hot sunlight</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+          <img src="img/gallery4.png" alt="Gallery Image 4">
+          <div class="caption">
+            <h3 data-en="Marketplace" data-my="Pasaran">Marketplace</h3>
+            <p class="text-sm" data-en="Variety stall available" data-my="Pelbagai gerai disediakan">Variety stall available</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+          <img src="img/gallery5.png" alt="Gallery Image 5">
+          <div class="caption">
+            <h3 data-en="Musicband" data-my="Band Muzik">Musicband</h3>
+            <p class="text-sm" data-en="Enhance the environment" data-my="Tingkatkan persekitaran">Enhance the environment</p>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+          <img src="img/gallery6.png" alt="Gallery Image 6">
+          <div class="caption">
+            <h3 data-en="Signboard" data-my="Papantanda">Signboard</h3>
+            <p class="text-sm" data-en="Tanjung Aru Nelayan's main signboard" data-my="Papan tanda utama Tanjung Aru Nelayan"> Tanjung Aru Nelayan's main signboard</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Things to Do Section -->
+<section id="things-to-do" class="section bg-gray-50" data-aos="fade-up">
+  <div class="container mx-auto px-4">
+    <h2 class="section-title center text-3xl font-bold text-gray-800 mb-4" data-en="Things to Do" data-my="Aktiviti">
+  Things to Do
+</h2>
+
+    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12"
+       data-en="Make the most of your visit with these exciting activities"
+       data-my="Manfaatkan lawatan anda sepenuhnya dengan aktiviti menarik ini">
+      Make the most of your visit with these exciting activities
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up" data-aos-delay="200">
+      <div class="activity-card"
+           onclick="openActivityModal('Relax by the Beach', 'Unwind with the sound of waves and breathtaking sunsets over golden sands.')">
+        <div class="activity-icon">🏖️</div>
+        <h3 class="text-xl font-semibold mb-2" data-en="Relax by the Beach" data-my="Santai di tepi pantai">Relax by the Beach</h3>
+        <p class="text-gray-600"
+           data-en="Enjoy the calm scenery and soothing waves."
+           data-my="Nikmati pemandangan yang tenang dan ombak yang menenangkan.">
+          Enjoy the calm scenery and soothing waves.
+        </p>
+      </div>
+
+      <div class="activity-card"
+           onclick="openActivityModal('Fish with Locals', 'Experience the life of a traditional fisherman and catch your own meal.')">
+        <div class="activity-icon">🎣</div>
+        <h3 class="text-xl font-semibold mb-2" data-en="Fish with Locals" data-my="Memancing dengan penduduk tempatan">Fish with Locals</h3>
+        <p class="text-gray-600"
+           data-en="Join the locals for a fun fishing trip."
+           data-my="Sertai penduduk tempatan untuk lawatan memancing yang menyeronokkan.">
+          Join the locals for a fun fishing trip.
+        </p>
+      </div>
+
+      <div class="activity-card"
+           onclick="openActivityModal('Snorkeling Fun', 'Explore underwater life in the crystal-clear waters near the shore.')">
+        <div class="activity-icon">🤿</div>
+        <h3 class="text-xl font-semibold mb-2" data-en="Snorkeling Fun" data-my="Keseronokan Snorkeling">Snorkeling Fun</h3>
+        <p class="text-gray-600"
+           data-en="See vibrant sea life up close and personal."
+           data-my="Lihat hidupan laut yang meriah secara dekat dan peribadi.">
+          See vibrant sea life up close and personal.
+        </p>
+      </div>
+
+      <div class="activity-card"
+           onclick="openActivityModal('Scenic Photography', 'Capture the natural beauty, colorful boats, and serene mangroves.')">
+        <div class="activity-icon">📸</div>
+        <h3 class="text-xl font-semibold mb-2" data-en="Scenic Photography" data-my="Fotografi Pemandangan">Scenic Photography</h3>
+        <p class="text-gray-600"
+           data-en="Perfect your shots of nature and culture."
+           data-my="Sempurnakan gambar alam dan budaya anda.">
+          Perfect your shots of nature and culture.
+        </p>
+      </div>
+
+      <div class="activity-card"
+           onclick="openActivityModal('Taste Local Delights', 'Try grilled seafood, coconut shakes, and authentic ambuyat at beach stalls.')">
+        <div class="activity-icon">🍽️</div>
+        <h3 class="text-xl font-semibold mb-2" data-en="Taste Local Delights" data-my="Rasai Keenakan Tempatan">Taste Local Delights</h3>
+        <p class="text-gray-600"
+           data-en="Discover unique food 'Ambuyat' of Labuan"
+           data-my="Temui makanan unik 'Ambuyat' Labuan">
+          Discover unique food 'Ambuyat' of Labuan
+        </p>
+      </div>
+
+      <div class="activity-card"
+           onclick="openActivityModal('Coastal Walks', 'Take a calming walk through the coastal path and enjoy the village vibe.')">
+        <div class="activity-icon">🚶‍♂️</div>
+        <h3 class="text-xl font-semibold mb-2" data-en="Coastal Walks" data-my="Jalan-jalan di tepi Pantai">Coastal Walks</h3>
+        <p class="text-gray-600"
+           data-en="Enjoy a peaceful and scenic walk by the sea."
+           data-my="Nikmati berjalan kaki yang damai dan indah di tepi laut.">
+          Enjoy a peaceful and scenic walk by the sea.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Stalls Section -->
+  <section id="stalls" class="section bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title center" data-en="Stalls & Menu" data-my="Gerai & Menu">Stalls & Menu</h2>
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-en="Delicious local dishes prepared fresh daily by beachside vendors" data-my="Hidangan tempatan yang lazat disediakan segar setiap hari oleh penjual tepi pantai">Delicious local dishes prepared fresh daily by beachside vendors</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Stall 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative overflow-hidden h-48">
+            <img src="img/stall1.png" alt="H'Ambuyat Samangkuk Agung" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+              <h3 class="text-white text-xl font-bold">H'Ambuyat Samangkuk Agung</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3">
+              <li class="flex justify-between border-b pb-2">
+                <span data-en="Grilled Fish" data-my="Ikan bakar">Grilled Fish</span>
+                <span class="font-semibold">RM15</span>
+              </li>
+              <li class="flex justify-between border-b pb-2">
+                <span data-en="Squid Skewers" data-my="Lidi Sotong">Squid Skewers</span>
+                <span class="font-semibold">RM12</span>
+              </li>
+              <li class="flex justify-between border-b pb-2">
+                <span data-en="Sambal Stingray" data-my="Sambal Ikan Pari">Sambal Stingray</span>
+                <span class="font-semibold">RM18</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Ambuyat</span>
+                <span class="font-semibold">RM10</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Stall 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl" data-aos="fade-down" data-aos-delay="200">
+          <div class="relative overflow-hidden h-48">
+            <img src="img/stall2.png" alt="Yati Tanjung" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+              <h3 class="text-white text-xl font-bold">Yati Tanjung</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3">
+              <li class="flex justify-between border-b pb-2">
+                <span>Coconut Shake</span>
+                <span class="font-semibold">RM5</span>
+              </li>
+              <li class="flex justify-between border-b pb-2">
+                <span>Pisang Goreng</span>
+                <span class="font-semibold">RM3</span>
+              </li>
+              <li class="flex justify-between border-b pb-2">
+                <span>Nasi Lemak</span>
+                <span class="font-semibold">RM7</span>
+              </li>
+              <li class="flex justify-between">
+                <span>Kuih-Muih</span>
+                <span class="font-semibold">RM2-5</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Stall 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+          <div class="relative overflow-hidden h-48">
+            <img src="img/stall3.png" alt="Lawender Empire" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
+              <h3 class="text-white text-xl font-bold">Lawender Empire</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <ul class="space-y-3">
+              <li class="flex justify-between border-b pb-2">
+                <span data-en="Seafood Platter" data-my="Pinggan Makanan Laut">Seafood Platter</span>
+                <span class="font-semibold">RM25</span>
+              </li>
+              <li class="flex justify-between border-b pb-2">
+                <span data-en="Grilled Prawns" data-my="Udang Bakar">Grilled Prawns</span>
+                <span class="font-semibold">RM18</span>
+              </li>
+              <li class="flex justify-between border-b pb-2">
+                <span data-en="Butter Crab" data-my="Ketam Mentega">Butter Crab</span>
+                <span class="font-semibold">RM30</span>
+              </li>
+              <li class="flex justify-between">
+                <span data-en="Fresh Oysters" data-my="Tiram segar">Fresh Oysters</span>
+                <span class="font-semibold" data-en="RM8 each" data-my="RM8 setiap satu">RM8 each</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<section id="facilities" class="section bg-gray-50 py-16" data-aos="fade-up">
+  <div class="container mx-auto px-4">
+    <h2 class="section-title center text-3xl font-bold text-gray-800 mb-4" data-en="Available Facilities" data-my="Kemudahan yang Ada">
+      Available Facilities
+    </h2>
+    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12 text-base"
+       data-en="Comfortable amenities for a stress-free visit."
+       data-my="Kemudahan yang selesa untuk lawatan tanpa tekanan.">
+      Comfortable amenities for a stress-free visit.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <!-- Facility 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-[1.02]" data-aos="zoom-in" data-aos-delay="0">
+        <div class="h-64 overflow-hidden">
+          <img src="img/facility1.png" alt="Public Restrooms"
+               class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-800 mb-1" data-en="Public Restrooms" data-my="Tandas Awam">🚻 Public Restrooms</h3>
+          <p class="text-sm text-gray-600" data-en="Clean and well-maintained public restrooms for your convenience."
+             data-my="Tandas awam yang bersih dan dijaga dengan baik untuk keselesaan anda.">
+            Clean and well-maintained public restrooms for your convenience.
+          </p>
+        </div>
+      </div>
+
+      <!-- Facility 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-[1.02]" data-aos="zoom-in" data-aos-delay="100">
+        <div class="h-64 overflow-hidden">
+          <img src="img/facility2.png" alt="Surau"
+               class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-800 mb-1">🕌 Surau</h3>
+          <p class="text-sm text-gray-600" data-en="A place of prayer and worship for Muslims."
+             data-my="Tempat solat dan beribadah bagi umat Islam.">
+            A place of prayer and worship for Muslims.
+          </p>
+        </div>
+      </div>
+
+      <!-- Facility 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-[1.02]" data-aos="zoom-in" data-aos-delay="200">
+        <div class="h-64 overflow-hidden">
+          <img src="img/facility3.png" alt="Picnic Areas"
+               class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-800 mb-1" data-en="Picnic Areas" data-my="Kawasan Berkelah">🧺 Picnic Areas</h3>
+          <p class="text-sm text-gray-600" data-en="Shaded picnic tables ideal for family meals or relaxing with friends."
+             data-my="Meja berkelah berlorek sesuai untuk hidangan keluarga atau bersantai bersama rakan-rakan.">
+            Shaded picnic tables ideal for family meals or relaxing with friends.
+          </p>
+        </div>
+      </div>
+
+      <!-- Facility 4 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-[1.02]" data-aos="zoom-in" data-aos-delay="300">
+        <div class="h-64 overflow-hidden">
+          <img src="img/facility4.png" alt="Parking"
+               class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-800 mb-1" data-en="Parking" data-my="Tempat Letak Kereta">🅿️ Parking</h3>
+          <p class="text-sm text-gray-600" data-en="Ample parking space conveniently located near the beach entrance."
+             data-my="Tempat letak kereta yang luas berhampiran pintu masuk pantai.">
+            Ample parking space conveniently located near the beach entrance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Facility 5 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-[1.02]" data-aos="zoom-in" data-aos-delay="400">
+        <div class="h-64 overflow-hidden">
+          <img src="img/facility5.png" alt="Shaded Benches"
+               class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-800 mb-1" data-en="Shaded Benches" data-my="Bangku Teduh">🪑 Shaded Benches</h3>
+          <p class="text-sm text-gray-600" data-en="Relax comfortably on benches with shade."
+             data-my="Bersantai dengan selesa di bangku yang teduh.">
+            Relax comfortably on benches with shade.
+          </p>
+        </div>
+      </div>
+
+      <!-- Facility 6 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden group transition-all duration-300 hover:shadow-xl hover:scale-[1.02]" data-aos="zoom-in" data-aos-delay="500">
+        <div class="h-64 overflow-hidden">
+          <img src="img/facility6.png" alt="Open Field"
+               class="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-800 mb-1" data-en="Open Field" data-my="Padang Terbuka">🌿 Open Field</h3>
+          <p class="text-sm text-gray-600" data-en="Perfect for sports and group activities."
+             data-my="Sesuai untuk sukan dan aktiviti berkumpulan.">
+            Perfect for sports and group activities.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="section bg-white" data-aos="zoom-in">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title center text-3xl font-bold text-gray-800 mb-4" data-en="Testimonials" data-my="Testimoni">
+  User Experience
+</h2>
+
+      <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-en="What our visitors say about their experience" data-my="Apa yang pelawat kami katakan tentang pengalaman mereka">What our visitors say about their experience</p>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="testimonial-slider">
+          <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+            <!-- Testimonial 1 -->
+            <div class="flex-shrink-0 w-full snap-start px-4">
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-lg mr-4">A</div>
+                    <div>
+                      <h4 class="font-semibold">Aida</h4>
+                      <p class="text-sm text-gray-500">Brunei</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 italic"
+                  data-en='"The sunset here left me speechless. The colors reflecting on the water were absolutely magical. We stayed until dark just taking it all in. Truly a paradise!"'
+                  data-my='"Masa matahari terbenam di sini membuatkan saya terdiam. Warna-warna yang terpantul di atas air sungguh ajaib. Kami tinggal sehingga gelap hanya mengambil semuanya. Benar-benar syurga!"'>
+                  "The sunset here left me speechless. The colors reflecting on the water were absolutely magical. We stayed until dark just taking it all in. Truly a paradise!"</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="flex-shrink-0 w-full snap-start px-4">
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-green-100 text-green-800 flex items-center justify-center font-bold text-lg mr-4">T</div>
+                    <div>
+                      <h4 class="font-semibold">Tom</h4>
+                      <p class="text-sm text-gray-500">UK</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 italic"
+                  data-en='"The fishing village was so peaceful and authentic. I spent a morning with the local fishermen and learned so much about their way of life. The seafood lunch we made from our catch was incredible. I will definitely be back!"'
+                  data-my='"Perkampungan nelayan itu sangat aman dan asli. Saya menghabiskan waktu pagi bersama nelayan tempatan dan belajar banyak tentang cara hidup mereka. Makan tengah hari makanan laut yang kami buat daripada hasil tangkapan kami adalah luar biasa. Saya pasti akan kembali!"'>
+                  "The fishing village was so peaceful and authentic. I spent a morning with the local fishermen and learned so much about their way of life. The seafood lunch we made from our catch was incredible. I'll definitely be back!"</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="flex-shrink-0 w-full snap-start px-4">
+              <div class="testimonial">
+                <div class="testimonial-content">
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-full bg-pink-100 text-pink-800 flex items-center justify-center font-bold text-lg mr-4">M</div>
+                    <div>
+                      <h4 class="font-semibold">Mei</h4>
+                      <p class="text-sm text-gray-500">Sabah</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-700 italic" 
+                  data-en='"Delicious seafood, friendly locals, and great views! We tried the ambuyat for the first time - what an experience! The stall owners were so patient showing us how to eat it properly. Cant wait to visit again."'
+                  data-my='"Makanan laut yang lazat, penduduk tempatan yang mesra, dan pemandangan yang hebat! Kami mencuba ambuyat buat kali pertama - sungguh satu pengalaman! Pemilik gerai begitu sabar menunjukkan kepada kami cara memakannya dengan betul. Tidak sabar untuk melawat lagi."'>
+                    "Delicious seafood, friendly locals, and great views! We tried the ambuyat for the first time - what an experience! The stall owners were so patient showing us how to eat it properly. Can't wait to visit again."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex justify-center mt-8 space-x-2">
+            <button class="w-3 h-3 rounded-full bg-primary"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-300"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+<section id="map" class="section bg-white py-16" data-aos="fade-up">
+  <div class="container mx-auto px-4">
+    <h2 class="section-title center text-3xl font-bold text-gray-800 mb-4" data-en="How to Get There" data-my="Cara ke Sana">
+  How to Get There
+</h2>
+
+    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-en="Plan your journey to the destination with this helpful guide." data-my="Rancang perjalanan anda ke destinasi dengan panduan ini.">
+      Plan your journey to the destination with this helpful guide.
+    </p>
+
+    <div class="md:flex md:space-x-10">
+      <!-- Left: Map -->
+      <div class="w-full md:w-1/2 h-[480px] rounded-xl overflow-hidden shadow-lg" data-aos="fade-right" data-aos-delay="100">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.524827734342!2d115.24605497498347!3d5.336535694642039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x322318287e982c71%3A0x4d30f78b954c7d8a!2sTanjung%20Aru%20Nelayan%20Beach%20Labuan%20Federal%20Territory!5e0!3m2!1sen!2smy!4v1750397685059!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Right: Info block aligned to map height -->
+<div class="w-full md:w-1/2 h-[480px] self-stretch flex flex-col justify-between space-y-8 mt-10 md:mt-0">
+
+  <!-- Travel Info -->
+  <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm flex-1" data-aos="fade-up" data-aos-delay="200">
+    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+      🧭 <span data-en="Travel Information" data-my="Maklumat Perjalanan">Travel Information</span>
+    </h3>
+    <ul class="text-gray-700 text-sm space-y-3">
+      <li data-en="Located just 20 minutes from Labuan town" data-my="Terletak hanya 20 minit dari bandar Labuan">
+        🚗 Located just 20 minutes from Labuan town
+      </li>
+      <li data-en="Easily accessible by car or taxi" data-my="Mudah diakses dengan kereta atau teksi">
+        🚕 Easily accessible by car or taxi
+      </li>
+      <li data-en="Plenty of free parking near the beach entrance" data-my="Banyak tempat letak kereta percuma berhampiran pintu masuk pantai">
+        🅿️ Plenty of free parking near the beach entrance
+      </li>
+      <li data-en="Food stalls and prayer facilities available nearby" data-my="Gerai makanan dan surau tersedia berdekatan">
+        🍽️ Food stalls & 🕌 prayer facilities available nearby
+      </li>
+    </ul>
+  </div>
+
+  <!-- Visitor Timing Info -->
+  <div class="bg-white border border-gray-200 p-6 rounded-xl shadow-sm flex-1" data-aos="fade-up" data-aos-delay="300">
+    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+      🕒 <span data-en="Visitor Timing Info" data-my="Maklumat Waktu Lawatan">Visitor Timing Info</span>
+    </h3>
+    <ul class="text-gray-700 text-sm space-y-3">
+      <li data-en="Open daily from 6:00 AM to 7:00 PM" data-my="Dibuka setiap hari dari 6:00 pagi hingga 7:00 malam">
+        🕘 Open daily> from 6:00 AM to 7:00 PM
+      </li>
+      <li data-en="Best visited during sunrise or sunset for breathtaking views" data-my="Waktu terbaik untuk lawatan adalah ketika matahari terbit atau terbenam untuk pemandangan menakjubkan">
+        🌅 Best visited during sunrise or sunset for breathtaking views
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="section bg-white" data-aos="fade-up">
+  <div class="container mx-auto px-4">
+    <h2 class="section-title center text-3xl font-bold text-gray-800 mb-4" data-en="Contact Us" data-my="Hubungi Kami">
+  Contact Us
+</h2>
+
+    <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12"
+       data-en="Have questions or need more information? Get in touch with us"
+       data-my="Ada soalan atau perlukan maklumat lanjut? Hubungi kami">
+      Have questions or need more information? Get in touch with us
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Info -->
+      <div class="bg-gray-50 rounded-xl p-8 shadow-lg" data-aos="fade-right" data-aos-delay="200">
+        <h3 class="text-xl font-bold mb-6" data-en="Contact Information" data-my="Maklumat Hubungan">Contact Information</h3>
+
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <span class="bg-primary/10 text-primary rounded-lg w-10 h-10 flex items-center justify-center mr-4">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <div>
+              <h4 class="font-semibold" data-en="Address" data-my="Alamat">Address</h4>
+              <p class="text-gray-600">Tanjung Aru Nelayan Beach, 87000 Labuan, Malaysia</p>
+            </div>
+          </li>
+
+          <li class="flex items-start">
+            <span class="bg-primary/10 text-primary rounded-lg w-10 h-10 flex items-center justify-center mr-4">
+              <i class="fas fa-phone-alt"></i>
+            </span>
+            <div>
+              <h4 class="font-semibold" data-en="Phone" data-my="Telefon">Phone</h4>
+              <p class="text-gray-600">+60 87-123 456</p>
+            </div>
+          </li>
+
+          <li class="flex items-start">
+            <span class="bg-primary/10 text-primary rounded-lg w-10 h-10 flex items-center justify-center mr-4">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <div>
+              <h4 class="font-semibold" data-en="Email" data-my="E-mel">Email</h4>
+              <p class="text-gray-600">nelayanbeach@labuan.my</p>
+            </div>
+          </li>
+
+          <li class="flex items-start">
+            <span class="bg-primary/10 text-primary rounded-lg w-10 h-10 flex items-center justify-center mr-4">
+              <i class="fas fa-clock"></i>
+            </span>
+            <div>
+              <h4 class="font-semibold" data-en="Opening Hours" data-my="Waktu Operasi">Opening Hours</h4>
+              <p class="text-gray-600" data-en="Daily 6:00 AM - 10:00 PM" data-my="Setiap hari 6:00 AM - 10:00 PM">
+                Daily 6:00 AM - 10:00 PM
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mt-8">
+          <h4 class="font-semibold mb-3" data-en="Follow Us" data-my="Ikuti Kami">Follow Us</h4>
+          <div class="flex space-x-3">
+            <a href="#" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-pink-600 text-white flex items-center justify-center">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-blue-400 text-white flex items-center justify-center">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-red-600 text-white flex items-center justify-center">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="bg-gray-50 rounded-xl p-8 shadow-lg" data-aos="fade-left" data-aos-delay="200">
+        <h3 class="text-xl font-bold mb-6" data-en="Send Us a Message" data-my="Hantar Mesej kepada Kami">Send Us a Message</h3>
+
+        <form class="contact-form">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1"
+                   data-en="Your Name" data-my="Nama Anda">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" data-en="Enter your name" data-my="Masukkan nama anda" required>
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1"
+                   data-en="Your Email" data-my="E-mel Anda">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email" data-en="Enter your email" data-my="Masukkan e-mel anda" required>
+          </div>
+
+          <div class="mb-4">
+            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1"
+                   data-en="Subject" data-my="Subjek">Subject</label>
+            <input type="text" id="subject" placeholder="What's this about?" data-en="What's this about?" data-my="Apa tujuan mesej ini?">
+          </div>
+
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1"
+                   data-en="Your Message" data-my="Mesej Anda">Your Message</label>
+            <textarea id="message" placeholder="How can we help you?" data-en="How can we help you?" data-my="Bagaimana kami boleh membantu anda?"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-full" data-en="Send Message" data-my="Hantar Mesej">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer" data-aos="fade-up" data-aos-delay="300">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4 text-white">Tanjung Aru Nelayan</h3>
+        <p class="text-gray-300 mb-4"
+           data-en="Discover the untouched beauty of Labuan's hidden gem. Crystal clear waters and unforgettable memories await."
+           data-my="Temui keindahan tersembunyi permata Labuan. Air jernih dan kenangan yang tidak dapat dilupakan menanti.">
+          Discover the untouched beauty of Labuan's hidden gem. Crystal clear waters and unforgettable memories await.
+        </p>
+        <div class="flex space-x-3">
+          <a href="#" class="text-gray-300 hover:text-white">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4 text-white" data-en="Quick Links" data-my="Pautan Pantas">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about" data-en="About" data-my="Tentang">About</a></li>
+          <li><a href="#gallery" data-en="Gallery" data-my="Galeri">Gallery</a></li>
+          <li><a href="#things-to-do" data-en="Things to Do" data-my="Aktiviti">Things to Do</a></li>
+          <li><a href="#stalls" data-en="Stalls" data-my="Gerai">Stalls</a></li>
+          <li><a href="#facilities" data-en="Facilities" data-my="Kemudahan">Facilities</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4 text-white" data-en="Information" data-my="Maklumat">Information</h4>
+        <ul class="footer-links">
+          <li><a href="#testimonials" data-en="Testimonials" data-my="Testimoni">Testimonials</a></li>
+          <li><a href="#map" data-en="Location" data-my="Lokasi">Location</a></li>
+          <li><a href="#contact" data-en="Contact" data-my="Hubungi">Contact</a></li>
+          <li><a href="#" data-en="Privacy Policy" data-my="Dasar Privasi">Privacy Policy</a></li>
+          <li><a href="#" data-en="Terms of Service" data-my="Terma Perkhidmatan">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold mb-4 text-white" data-en="Newsletter" data-my="Surat Berita">Newsletter</h4>
+        <p class="text-gray-300 mb-4"
+           data-en="Subscribe to our newsletter for updates and special offers."
+           data-my="Langgan surat berita kami untuk kemas kini dan tawaran istimewa.">
+          Subscribe to our newsletter for updates and special offers.
+        </p>
+        <form class="flex flex-col sm:flex-row">
+          <input type="email" placeholder="Your email" class="px-3 py-2 rounded-l focus:outline-none w-full" data-en="Your email" data-my="Email anda">
+          <button type="submit" class="bg-primary text-white px-4 rounded-r">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+      <p data-en="© 2025 Tanjung Aru Nelayan Beach Labuan. All rights reserved."
+         data-my="© 2025 Pantai Nelayan Tanjung Aru Labuan. Semua hak cipta terpelihara.">
+        © 2025 Tanjung Aru Nelayan Beach Labuan. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg hidden hover:bg-blue-800 transition-all duration-300 flex items-center justify-center">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Activity Modal -->
+  <div id="activityModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-xl max-w-md w-full mx-4 p-6 relative">
+      <button id="closeModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+        <i class="fas fa-times"></i>
+      </button>
+      <h3 id="modalTitle" class="text-xl font-bold mb-2"></h3>
+      <p id="modalContent" class="text-gray-700 mb-4"></p>
+      <div class="flex justify-end">
+        <button id="modalCloseBtn" class="px-4 py-2 bg-primary text-white rounded hover:bg-blue-700">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+    <div class="relative max-w-4xl w-full p-4">
+      <button id="closeLightbox" class="absolute top-4 right-4 text-white text-3xl hover:text-primary z-50">
+      </button>
+      <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[90vh] mx-auto rounded">
+      <div class="text-white text-center mt-4" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+
+</body>
+</html>
